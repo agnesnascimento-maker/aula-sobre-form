@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Formulario HTML</title>
+</head>
+<body>
+
+    <h2>Exemplo de Formulario HTML</h2>
+
+    <!-- 
+      =====================================================
+      RESUMO DOS ELEMENTOS UTILIZADOS:
+      =====================================================
+      <h2>: Título principal da página.
+      <form>: A pasta/container principal do formulário.
+          - action="": Para onde os dados vão quando enviados.
+          - method="POST": Envia os dados de forma escondida/segura.
+      <fieldset>: Desenha a caixinha/borda em volta de todo o formulário.
+      <legend>: É o título que fica cravado na borda do <fieldset>.
+      <label>: O texto/etiqueta que avisa o que a pessoa deve preencher.
+          - for="": Liga o texto direto com o id="" do campo.
+      <input>: A caixa de entrada de dados. Seu comportamento muda com o type:
+          - type="text": Caixa de texto comum (Nome, CEP e Outro gênero).
+          - type="number": Aceita apenas números (Idade). Aceita min e max.
+          - type="email": Checa automaticamente se tem o @ do e-mail.
+          - type="password": Esconde os caracteres com pontinhos por segurança.
+          - type="date": Abre um calendário para escolher a data (DD/MM/AAAA).
+          - type="radio": Botão de bolinha de escolha única (Gênero).
+          - type="submit": Vira o botão de enviar.
+      required: Torna o preenchimento do campo obrigatório.
+      maxlength="9": Trava o máximo de caracteres digitados (usado no CEP).
+      <select> e <option>: Cria a lista suspensa para escolher uma das opções (Série).
+      <textarea>: Caixa de texto grande de várias linhas (Sobre você / Detalhes adicionais).
+      =====================================================
+    -->
+
+    <!-- FORMULÁRIO NA PRÁTICA -->
+    <form action="" method="POST">
+        
+        <fieldset>
+            <legend>Dados do Aluno</legend>
+
+            <!-- NOME -->
+            <p>
+                <label for="nome">Nome Completo:*</label><br>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </p>
+
+            <!-- DATA DE NASCIMENTO -->
+            <p>
+                <label for="nascimento">Data de Nascimento:*</label><br>
+                <input type="date" id="nascimento" name="nascimento" required>
+            </p>
+
+            <!-- IDADE -->
+            <p>
+                <label for="idade">Idade:*</label><br>
+                <input type="number" id="idade" name="idade" placeholder="Ex: 16" min="1" max="120" required>
+            </p>
+
+            <!-- GÊNERO -->
+            <p>
+                <label>Gênero:*</label><br>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label><br>
+
+                <input type="radio" id="masculino" name="genero" value="masculino">
+                <label for="masculino">Masculino</label><br>
+
+                <input type="radio" id="nao_binario" name="genero" value="nao_binario">
+                <label for="nao_binario">Não-binário</label><br>
+
+                <input type="radio" id="outro" name="genero" value="outro">
+                <label for="outro">Outro:</label>
+                <input type="text" id="outro_genero" name="outro_genero" placeholder="Especifique seu gênero"><br>
+
+                <input type="radio" id="prefiro_nao_dizer" name="genero" value="prefiro_nao_dizer">
+                <label for="prefiro_nao_dizer">Prefiro não informar</label>
+            </p>
+
+            <!-- E-MAIL -->
+            <p>
+                <label for="email">E-mail:*</label><br>
+                <input type="email" id="email" name="email" placeholder="seuemail@email.com" required>
+            </p>
+
+            <!-- SENHA -->
+            <p>
+                <label for="senha">Senha:*</label><br>
+                <input type="password" id="senha" name="senha" placeholder="Crie sua senha" required>
+            </p>
+
+            <!-- CEP -->
+            <p>
+                <label for="cep">CEP:*</label><br>
+                <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9" required>
+            </p>
+
+            <!-- SÉRIE -->
+            <p>
+                <label for="serie">Série:*</label><br>
+                <select id="serie" name="serie" required>
+                    <option value="">Selecione uma opção...</option>
+                    <option value="1">1º Ano</option>
+                    <option value="2">2º Ano</option>
+                    <option value="3">3º Ano</option>
+                </select>
+            </p>
+
+            <!-- SOBRE VOCÊ (NOVO) -->
+            <p>
+                <label for="sobre_voce">Sobre você:</label><br>
+                <textarea id="sobre_voce" name="sobre_voce" rows="4" placeholder="Fale um pouco sobre você, seus hobbys ou interesses..."></textarea>
+            </p>
+
+            <!-- DETALHES ADICIONAIS (NOVO) -->
+            <p>
+                <label for="detalhes_adicionais">Detalhes adicionais (Opcional):</label><br>
+                <textarea id="detalhes_adicionais" name="detalhes_adicionais" rows="3" placeholder="Outras informações importantes..."></textarea>
+            </p>
+
+            <!-- BOTÃO DE ENVIAR -->
+            <p>
+                <input type="submit" value="Enviar Ficha">
+            </p>
+
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
