@@ -8,39 +8,6 @@
 
     <h2>Exemplo de Formulario HTML</h2>
 
-    <!-- 
-      =====================================================
-      RESUMO DOS ELEMENTOS UTILIZADOS:
-      =====================================================
-      <h2>: Título principal da página.
-      <form>: A pasta/container principal do formulário.
-          - action="": Para onde os dados vão quando enviados.
-          - method="POST": Envia os dados de forma escondida/segura.
-      <fieldset>: Desenha a caixinha/borda em volta dos grupos do formulário.
-      <legend>: É o título que fica cravado na borda do <fieldset>.
-      <label>: O texto/etiqueta que avisa o que a pessoa deve preencher.
-          - for="": Liga o texto direto com o id="" do campo.
-      <input>: A caixa de entrada de dados. Seu comportamento muda com o type:
-          - type="text": Caixa de texto comum (Nome, CEP e Outro gênero).
-          - type="number": Aceita apenas números (Idade). Aceita min e max.
-          - type="email": Checa automaticamente se tem o @ do e-mail.
-          - type="password": Esconde os caracteres com pontinhos por segurança (mínimo 6 dígitos).
-          - type="date": Abre um calendário para escolher a data (DD/MM/AAAA).
-          - type="radio": Botão de bolinha de escolha única (Gênero).
-          - type="time": Selecionador de horário.
-          - type="submit": Vira o botão de enviar.
-      <datalist>: Lista de sugestões de autocompletar para o <input> (HTML e CSS).
-      <address>: Elemento semântico para exibir informações de contato.
-      <details> e <summary>: Caixinha retrátil de dúvida/informação extra.
-      <mark>: Destaca um texto com cor de marca-texto.
-      <button>: Botão clicável de envio do formulário.
-      required: Torna o preenchimento do campo obrigatório.
-      maxlength="9": Trava o máximo de caracteres digitados (usado no CEP).
-      <select> e <option>: Cria a lista suspensa para escolher uma das opções (Série).
-      <textarea>: Caixa de texto grande de várias linhas (Sobre você / Detalhes adicionais).
-      =====================================================
-    -->
-
     <!-- FORMULÁRIO NA PRÁTICA -->
     <form action="" method="POST">
         
@@ -115,13 +82,17 @@
                 </select>
             </p>
 
-            <!-- LINGUAGEM FAVORITA (APENAS HTML E CSS) -->
+            <!-- LINGUAGEM FAVORITA -->
             <p>
                 <label for="linguagem">Linguagem Favorita:*</label><br>
                 <input list="linguagens" id="linguagem" name="linguagem" placeholder="Escolha ou digite..." required>
                 <datalist id="linguagens">
                     <option value="HTML">
                     <option value="CSS">
+                    <option value="JavaScript">
+                    <option value="Python">
+                    <option value="Java">
+                
                 </datalist>
             </p>
 
@@ -159,14 +130,14 @@
 
             <p>O campo <mark>senha</mark> precisa ter pelo menos 6 caracteres.</p>
 
-            <!-- HORÁRIO PREFERIDO (MOVIDO PARA O FINAL) -->
+            <!-- HORÁRIO PREFERIDO -->
             <p>
                 <label for="hora-cadastro">Horário preferido para o contato:</label><br>
                 <input type="time" id="hora-cadastro" name="hora-cadastro">
             </p>
         </fieldset>
 
-        <!-- BOTÃO DE ENVIAR (FINAL DE TUDO) -->
+        <!-- BOTÃO DE ENVIAR (FINAL) -->
         <p>
             <button type="submit">Cadastrar</button>
         </p>
