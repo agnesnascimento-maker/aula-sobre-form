@@ -28,6 +28,7 @@
           - type="date": Abre um calendário para escolher a data (DD/MM/AAAA).
           - type="radio": Botão de bolinha de escolha única (Gênero).
           - type="submit": Vira o botão de enviar.
+      <datalist>: Lista de sugestões de autocompletar para o <input> (HTML e CSS).
       required: Torna o preenchimento do campo obrigatório.
       maxlength="9": Trava o máximo de caracteres digitados (usado no CEP).
       <select> e <option>: Cria a lista suspensa para escolher uma das opções (Série).
@@ -108,13 +109,28 @@
                 </select>
             </p>
 
-            <!-- SOBRE VOCÊ (NOVO) -->
+            <!-- LINGUAGEM FAVORITA (APENAS HTML E CSS) -->
+            <p>
+                <label for="linguagem">Linguagem Favorita:*</label><br>
+                <input list="linguagens" id="linguagem" name="linguagem" placeholder="Escolha ou digite..." required>
+                <datalist id="linguagens">
+                    <option value="HTML">
+                    <option value="CSS">
+                    <option value="JavaScript">
+                     <option value="Python"
+                     option value="Java">
+                    
+                    
+                </datalist>
+            </p>
+
+            <!-- SOBRE VOCÊ -->
             <p>
                 <label for="sobre_voce">Sobre você:</label><br>
                 <textarea id="sobre_voce" name="sobre_voce" rows="4" placeholder="Fale um pouco sobre você, seus hobbys ou interesses..."></textarea>
             </p>
 
-            <!-- DETALHES ADICIONAIS (NOVO) -->
+            <!-- DETALHES ADICIONAIS -->
             <p>
                 <label for="detalhes_adicionais">Detalhes adicionais (Opcional):</label><br>
                 <textarea id="detalhes_adicionais" name="detalhes_adicionais" rows="3" placeholder="Outras informações importantes..."></textarea>
