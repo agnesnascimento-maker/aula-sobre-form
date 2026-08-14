@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>DevConnect</title>
+</head>
+<body>
+
+    <h1>DevConnect</h1>
+    <p>Cadastre-se para participar de projetos e oportunidades na área de desenvolvimento de sistemas.</p>
+
+    <form>
+
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"><br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required><br><br>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha"><br><br>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" placeholder="Ex: 16"><br><br>
+
+            <label for="nascimento">Data de nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento"><br><br>
+
+            <label for="genero">Gênero:</label>
+            <select id="genero" name="genero">
+                <option value="">Selecione</option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="nao-binario">Não-binário</option>
+                <option value="outro">Outro</option>
+                <option value="prefiro-nao-informar">Prefiro não informar</option>
+            </select>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Informações Profissionais</legend>
+
+            <p>
+                <label for="linguagem">Linguagem Favorita:*</label><br>
+                <input list="linguagens" id="linguagem" name="linguagem" placeholder="Escolha ou digite..." required>
+                <datalist id="linguagens">
+                    <option value="HTML">
+                    <option value="CSS">
+                    <option value="JavaScript">
+                    <option value="Python">
+                    <option value="Java">
+                    <option value="C#">
+                    <option value="PHP">
+                </datalist>
+            </p>
+
+            <label for="nivel">Nível de conhecimento:</label>
+            <select id="nivel" name="nivel">
+                <option value="">Selecione</option>
+                <option value="iniciante">Iniciante</option>
+                <option value="intermediario">Intermediário</option>
+                <option value="avancado">Avançado</option>
+            </select><br><br>
+
+            <label for="exp">Fale sobre sua experiência:</label><br>
+            <textarea id="exp" name="exp" rows="4" cols="40" placeholder="Conte um pouco sobre sua experiência com tecnologia..."></textarea>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Preferências de Contato</legend>
+
+            <label for="horario">Melhor horário para contato:</label>
+            <input type="time" id="horario" name="horario"><br><br>
+
+            <label for="data">Data disponível para iniciar um projeto:</label>
+            <input type="date" id="data" name="data">
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Informações Adicionais</legend>
+
+            <details>
+                <summary>O que é a DevConnect?</summary>
+                <p>Plataforma para conectar desenvolvedores.</p>
+            </details>
+
+            <br>
+
+            <mark>Atenção: confira seus dados antes de realizar o cadastro.</mark>
+
+            <p>Para dúvidas, entre em contato:</p>
+
+            <address>
+                <em>DevConnect</em><br>
+                <em>E-mail: agnes.nascimento@edu.senai.br</em><br>
+                <em>Telefone: (11) 9002-8922</em>
+            </address>
+
+            <p>Data de abertura dos cadastros: 14 de agosto de 2026</p>
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Cadastrar Desenvolvedor</button>
+
+    </form>
+
+</body>
+</html>
