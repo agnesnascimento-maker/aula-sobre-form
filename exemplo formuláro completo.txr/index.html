@@ -16,7 +16,7 @@
       <form>: A pasta/container principal do formulário.
           - action="": Para onde os dados vão quando enviados.
           - method="POST": Envia os dados de forma escondida/segura.
-      <fieldset>: Desenha a caixinha/borda em volta de todo o formulário.
+      <fieldset>: Desenha a caixinha/borda em volta dos grupos do formulário.
       <legend>: É o título que fica cravado na borda do <fieldset>.
       <label>: O texto/etiqueta que avisa o que a pessoa deve preencher.
           - for="": Liga o texto direto com o id="" do campo.
@@ -24,11 +24,16 @@
           - type="text": Caixa de texto comum (Nome, CEP e Outro gênero).
           - type="number": Aceita apenas números (Idade). Aceita min e max.
           - type="email": Checa automaticamente se tem o @ do e-mail.
-          - type="password": Esconde os caracteres com pontinhos por segurança.
+          - type="password": Esconde os caracteres com pontinhos por segurança (mínimo 6 dígitos).
           - type="date": Abre um calendário para escolher a data (DD/MM/AAAA).
           - type="radio": Botão de bolinha de escolha única (Gênero).
+          - type="time": Selecionador de horário.
           - type="submit": Vira o botão de enviar.
       <datalist>: Lista de sugestões de autocompletar para o <input> (HTML e CSS).
+      <address>: Elemento semântico para exibir informações de contato.
+      <details> e <summary>: Caixinha retrátil de dúvida/informação extra.
+      <mark>: Destaca um texto com cor de marca-texto.
+      <button>: Botão clicável de envio do formulário.
       required: Torna o preenchimento do campo obrigatório.
       maxlength="9": Trava o máximo de caracteres digitados (usado no CEP).
       <select> e <option>: Cria a lista suspensa para escolher uma das opções (Série).
@@ -39,6 +44,7 @@
     <!-- FORMULÁRIO NA PRÁTICA -->
     <form action="" method="POST">
         
+        <!-- BLINDAO 1: DADOS DO ALUNO -->
         <fieldset>
             <legend>Dados do Aluno</legend>
 
@@ -89,7 +95,7 @@
             <!-- SENHA -->
             <p>
                 <label for="senha">Senha:*</label><br>
-                <input type="password" id="senha" name="senha" placeholder="Crie sua senha" required>
+                <input type="password" id="senha" name="senha" placeholder="Crie sua senha" minlength="6" required>
             </p>
 
             <!-- CEP -->
@@ -116,11 +122,6 @@
                 <datalist id="linguagens">
                     <option value="HTML">
                     <option value="CSS">
-                    <option value="JavaScript">
-                     <option value="Python"
-                     option value="Java">
-                    
-                    
                 </datalist>
             </p>
 
@@ -136,12 +137,39 @@
                 <textarea id="detalhes_adicionais" name="detalhes_adicionais" rows="3" placeholder="Outras informações importantes..."></textarea>
             </p>
 
-            <!-- BOTÃO DE ENVIAR -->
+            <!-- CONTATO -->
             <p>
-                <input type="submit" value="Enviar Ficha">
+                <label>Contato:</label><br>
+                <address>
+                    E-mail: agnes1aisha@gmail.com <br>
+                    Telefone: (11) 9002-8922
+                </address>
             </p>
 
         </fieldset>
+
+        <!-- BLINDAO 2: OUTRAS INFORMAÇÕES -->
+        <fieldset>
+            <legend>Outras Informações</legend>
+
+            <details>
+                <summary>O que é um formulário HTML?</summary>
+                <p>Um formulário HTML é utilizado para coletar informações dos usuários e enviá-las para um servidor.</p>
+            </details>
+
+            <p>O campo <mark>senha</mark> precisa ter pelo menos 6 caracteres.</p>
+
+            <!-- HORÁRIO PREFERIDO (MOVIDO PARA O FINAL) -->
+            <p>
+                <label for="hora-cadastro">Horário preferido para o contato:</label><br>
+                <input type="time" id="hora-cadastro" name="hora-cadastro">
+            </p>
+        </fieldset>
+
+        <!-- BOTÃO DE ENVIAR (FINAL DE TUDO) -->
+        <p>
+            <button type="submit">Cadastrar</button>
+        </p>
 
     </form>
 
