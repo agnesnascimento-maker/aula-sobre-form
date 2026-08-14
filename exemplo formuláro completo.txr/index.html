@@ -8,10 +8,44 @@
 
     <h2>Exemplo de Formulario HTML</h2>
 
+    <!-- 
+      =====================================================
+      RESUMO DOS ELEMENTOS UTILIZADOS:
+      =====================================================
+      <h2>: Título principal da página.
+      <form>: O container/pasta principal do formulário.
+          - action="": Para onde os dados vão quando enviados.
+          - method="POST": Envia os dados de forma escondida/segura.
+      <fieldset>: Desenha uma caixa/borda em volta de um grupo de campos.
+      <legend>: Título gravado na borda do <fieldset>.
+      <label>: O texto/etiqueta que avisa o que a pessoa deve preencher.
+          - for="": Conecta o label ao id="" do campo correspondente.
+      <input>: Caixa de entrada de dados. Seu tipo varia com a propriedade type:
+          - type="text": Caixa de texto simples (Nome, CEP e Outro gênero).
+          - type="number": Entrada apenas numérica (Idade, min e max definem os limites).
+          - type="email": Valida se o formato digitado contém @ e domínio.
+          - type="password": Oculta os caracteres digitados por segurança (minlength="6" define tamanho mínimo).
+          - type="date": Exibe um seletor de data em formato de calendário (DD/MM/AAAA).
+          - type="radio": Botão de seleção circular para escolha única (Gênero).
+          - type="time": Seletor para escolha de horário (HH:MM).
+          - type="submit": Botão padrão para envio do formulário.
+      <datalist>: Lista com sugestões de autocompletar ligada a um <input> (HTML, CSS, JS, etc.).
+      <address>: Elemento semântico utilizado para apresentar informações de contato (e-mail, telefone).
+      <details>: Cria uma caixa de conteúdo retrátil que o usuário pode abrir ou fechar.
+      <summary>: Define o título/cabeçalho clicável para o elemento <details>.
+      <mark>: Destaca um trecho de texto com cor de marca-texto.
+      <button>: Botão clicável (type="submit" para enviar dados do formulário).
+      <select> e <option>: Cria um menu suspenso de seleção única (Série).
+      <textarea>: Caixa de texto multilinha para mensagens longas (Sobre você / Detalhes).
+      required: Atributo que torna o preenchimento do campo obrigatório.
+      maxlength="9": Atributo que limita a quantidade máxima de caracteres digitados (usado no CEP).
+      =====================================================
+    -->
+
     <!-- FORMULÁRIO NA PRÁTICA -->
     <form action="" method="POST">
         
-        <!-- BLINDAO 1: DADOS DO ALUNO -->
+        <!-- BLOCO 1: DADOS DO ALUNO -->
         <fieldset>
             <legend>Dados do Aluno</legend>
 
@@ -92,7 +126,8 @@
                     <option value="JavaScript">
                     <option value="Python">
                     <option value="Java">
-                
+                    <option value="C#">
+                    <option value="PHP">
                 </datalist>
             </p>
 
@@ -119,7 +154,7 @@
 
         </fieldset>
 
-        <!-- BLINDAO 2: OUTRAS INFORMAÇÕES -->
+        <!-- BLOCO 2: OUTRAS INFORMAÇÕES -->
         <fieldset>
             <legend>Outras Informações</legend>
 
