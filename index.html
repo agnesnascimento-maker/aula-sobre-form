@@ -45,8 +45,19 @@
         <fieldset>
             <legend>Informações Profissionais</legend>
 
-            <label for="linguagem">Linguagem de programação favorita:</label>
-            <input type="text" id="linguagem" name="linguagem"><br><br>
+            <p>
+                <label for="linguagem">Linguagem Favorita:*</label><br>
+                <input list="linguagens" id="linguagem" name="linguagem" placeholder="Escolha ou digite..." required>
+                <datalist id="linguagens">
+                    <option value="HTML">
+                    <option value="CSS">
+                    <option value="JavaScript">
+                    <option value="Python">
+                    <option value="Java">
+                    <option value="C#">
+                    <option value="PHP">
+                </datalist>
+            </p>
 
             <label for="nivel">Nível de conhecimento:</label>
             <select id="nivel" name="nivel">
