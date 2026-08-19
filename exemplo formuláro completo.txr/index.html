@@ -1,122 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Exemplo de Formulario HTML</title>
+    <title>DevConnect</title>
 </head>
 <body>
 
-    <h2>Exemplo de Formulario HTML</h2>
+    <h1>DevConnect</h1>
+    <p>Cadastre-se para participar de projetos e oportunidades na área de desenvolvimento de sistemas.</p>
 
-    <!-- 
-      =====================================================
-      RESUMO DOS ELEMENTOS UTILIZADOS:
-      =====================================================
-      <h2>: Título principal da página.
-      <form>: O container/pasta principal do formulário.
-          - action="": Para onde os dados vão quando enviados.
-          - method="POST": Envia os dados de forma escondida/segura.
-      <fieldset>: Desenha uma caixa/borda em volta de um grupo de campos.
-      <legend>: Título gravado na borda do <fieldset>.
-      <label>: O texto/etiqueta que avisa o que a pessoa deve preencher.
-          - for="": Conecta o label ao id="" do campo correspondente.
-      <input>: Caixa de entrada de dados. Seu tipo varia com a propriedade type:
-          - type="text": Caixa de texto simples (Nome, CEP e Outro gênero).
-          - type="number": Entrada apenas numérica (Idade, min e max definem os limites).
-          - type="email": Valida se o formato digitado contém @ e domínio.
-          - type="password": Oculta os caracteres digitados por segurança (minlength="6" define tamanho mínimo).
-          - type="date": Exibe um seletor de data em formato de calendário (DD/MM/AAAA).
-          - type="radio": Botão de seleção circular para escolha única (Gênero).
-          - type="time": Seletor para escolha de horário (HH:MM).
-          - type="submit": Botão padrão para envio do formulário.
-      <datalist>: Lista com sugestões de autocompletar ligada a um <input> (HTML, CSS, JS, etc.).
-      <address>: Elemento semântico utilizado para apresentar informações de contato (e-mail, telefone).
-      <details>: Cria uma caixa de conteúdo retrátil que o usuário pode abrir ou fechar.
-      <summary>: Define o título/cabeçalho clicável para o elemento <details>.
-      <mark>: Destaca um trecho de texto com cor de marca-texto.
-      <button>: Botão clicável (type="submit" para enviar dados do formulário).
-      <select> e <option>: Cria um menu suspenso de seleção única (Série).
-      <textarea>: Caixa de texto multilinha para mensagens longas (Sobre você / Detalhes).
-      required: Atributo que torna o preenchimento do campo obrigatório.
-      maxlength="9": Atributo que limita a quantidade máxima de caracteres digitados (usado no CEP).
-      =====================================================
-    -->
+    <form>
 
-    <!-- FORMULÁRIO NA PRÁTICA -->
-    <form action="" method="POST">
-        
-        <!-- BLOCO 1: DADOS DO ALUNO -->
         <fieldset>
-            <legend>Dados do Aluno</legend>
+            <legend>Informações Pessoais</legend>
 
-            <!-- NOME -->
-            <p>
-                <label for="nome">Nome Completo:*</label><br>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-            </p>
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo"><br><br>
 
-            <!-- DATA DE NASCIMENTO -->
-            <p>
-                <label for="nascimento">Data de Nascimento:*</label><br>
-                <input type="date" id="nascimento" name="nascimento" required>
-            </p>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required><br><br>
 
-            <!-- IDADE -->
-            <p>
-                <label for="idade">Idade:*</label><br>
-                <input type="number" id="idade" name="idade" placeholder="Ex: 16" min="1" max="120" required>
-            </p>
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha"><br><br>
 
-            <!-- GÊNERO -->
-            <p>
-                <label>Gênero:*</label><br>
-                <input type="radio" id="feminino" name="genero" value="feminino" required>
-                <label for="feminino">Feminino</label><br>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" placeholder="Ex: 16"><br><br>
 
-                <input type="radio" id="masculino" name="genero" value="masculino">
-                <label for="masculino">Masculino</label><br>
+            <label for="nascimento">Data de nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento"><br><br>
 
-                <input type="radio" id="nao_binario" name="genero" value="nao_binario">
-                <label for="nao_binario">Não-binário</label><br>
+            <label for="genero">Gênero:</label>
+            <select id="genero" name="genero">
+                <option value="">Selecione</option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="nao-binario">Não-binário</option>
+                <option value="outro">Outro</option>
+                <option value="prefiro-nao-informar">Prefiro não informar</option>
+            </select>
+        </fieldset>
 
-                <input type="radio" id="outro" name="genero" value="outro">
-                <label for="outro">Outro:</label>
-                <input type="text" id="outro_genero" name="outro_genero" placeholder="Especifique seu gênero"><br>
+        <br>
 
-                <input type="radio" id="prefiro_nao_dizer" name="genero" value="prefiro_nao_dizer">
-                <label for="prefiro_nao_dizer">Prefiro não informar</label>
-            </p>
+        <fieldset>
+            <legend>Informações Profissionais</legend>
 
-            <!-- E-MAIL -->
-            <p>
-                <label for="email">E-mail:*</label><br>
-                <input type="email" id="email" name="email" placeholder="seuemail@email.com" required>
-            </p>
-
-            <!-- SENHA -->
-            <p>
-                <label for="senha">Senha:*</label><br>
-                <input type="password" id="senha" name="senha" placeholder="Crie sua senha" minlength="6" required>
-            </p>
-
-            <!-- CEP -->
-            <p>
-                <label for="cep">CEP:*</label><br>
-                <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9" required>
-            </p>
-
-            <!-- SÉRIE -->
-            <p>
-                <label for="serie">Série:*</label><br>
-                <select id="serie" name="serie" required>
-                    <option value="">Selecione uma opção...</option>
-                    <option value="1">1º Ano</option>
-                    <option value="2">2º Ano</option>
-                    <option value="3">3º Ano</option>
-                </select>
-            </p>
-
-            <!-- LINGUAGEM FAVORITA -->
             <p>
                 <label for="linguagem">Linguagem Favorita:*</label><br>
                 <input list="linguagens" id="linguagem" name="linguagem" placeholder="Escolha ou digite..." required>
@@ -131,51 +59,58 @@
                 </datalist>
             </p>
 
-            <!-- SOBRE VOCÊ -->
-            <p>
-                <label for="sobre_voce">Sobre você:</label><br>
-                <textarea id="sobre_voce" name="sobre_voce" rows="4" placeholder="Fale um pouco sobre você, seus hobbys ou interesses..."></textarea>
-            </p>
+            <label for="nivel">Nível de conhecimento:</label>
+            <select id="nivel" name="nivel">
+                <option value="">Selecione</option>
+                <option value="iniciante">Iniciante</option>
+                <option value="intermediario">Intermediário</option>
+                <option value="avancado">Avançado</option>
+            </select><br><br>
 
-            <!-- DETALHES ADICIONAIS -->
-            <p>
-                <label for="detalhes_adicionais">Detalhes adicionais (Opcional):</label><br>
-                <textarea id="detalhes_adicionais" name="detalhes_adicionais" rows="3" placeholder="Outras informações importantes..."></textarea>
-            </p>
-
-            <!-- CONTATO -->
-            <p>
-                <label>Contato:</label><br>
-                <address>
-                    E-mail: agnes1aisha@gmail.com <br>
-                    Telefone: (11) 9002-8922
-                </address>
-            </p>
-
+            <label for="exp">Fale sobre sua experiência:</label><br>
+            <textarea id="exp" name="exp" rows="4" cols="40" placeholder="Conte um pouco sobre sua experiência com tecnologia..."></textarea>
         </fieldset>
 
-        <!-- BLOCO 2: OUTRAS INFORMAÇÕES -->
+        <br>
+
         <fieldset>
-            <legend>Outras Informações</legend>
+            <legend>Preferências de Contato</legend>
+
+            <label for="horario">Melhor horário para contato:</label>
+            <input type="time" id="horario" name="horario"><br><br>
+
+            <label for="data">Data disponível para iniciar um projeto:</label>
+            <input type="date" id="data" name="data">
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Informações Adicionais</legend>
 
             <details>
-                <summary>O que é um formulário HTML?</summary>
-                <p>Um formulário HTML é utilizado para coletar informações dos usuários e enviá-las para um servidor.</p>
+                <summary>O que é a DevConnect?</summary>
+                <p>Plataforma para conectar desenvolvedores.</p>
             </details>
 
-            <p>O campo <mark>senha</mark> precisa ter pelo menos 6 caracteres.</p>
+            <br>
 
-            <!-- HORÁRIO PREFERIDO -->
-            <p>
-                <label for="hora-cadastro">Horário preferido para o contato:</label><br>
-                <input type="time" id="hora-cadastro" name="hora-cadastro">
-            </p>
+            <mark>Atenção: confira seus dados antes de realizar o cadastro.</mark>
+
+            <p>Para dúvidas, entre em contato:</p>
+
+            <address>
+                <em>DevConnect</em><br>
+                <em>E-mail: agnes.nascimento@edu.senai.br</em><br>
+                <em>Telefone: (11) 9002-8922</em>
+            </address>
+
+            <p>Data de abertura dos cadastros: 14 de agosto de 2026</p>
         </fieldset>
 
-        <!-- BOTÃO DE ENVIAR (FINAL) -->
-        <p>
-            <button type="submit">Cadastrar</button>
-        </p>
+        <br>
+
+        <button type="submit">Cadastrar Desenvolvedor</button>
 
     </form>
 

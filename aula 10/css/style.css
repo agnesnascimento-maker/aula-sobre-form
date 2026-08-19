@@ -1,0 +1,91 @@
+/* ==========================================
+   ESTILOS ATIVOS DA PÁGINA
+   ========================================== */
+
+/* Fundo da página */
+body {
+    background-color: #F5A37B;
+}
+
+/* Título principal (CORES) com a fonte Chango */
+h1 {
+    color: bisque;
+    font-family: "Chango", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+}
+
+/* Subtítulo (FONTES) com a fonte Chango e cor chocolate */
+h2 {
+    color: chocolate;
+    font-family: "Chango", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
+
+/* Textos das explicações */
+p {
+    color: black !important;
+    font-size: 120%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* espaçamento entre linhas */
+    line-height: 2em;
+}
+
+/* Regra para destacar termos específicos no HTML usando a tag <span> */
+span {
+    font-size: 2em;
+    color: red;
+}
+
+
+/* ==========================================
+   ANOTAÇÕES E EXEMPLOS DA AULA
+   ========================================== */
+
+/* --- CORES --- */
+
+/* 
+body {
+    background-color: #B72818;
+}
+*/
+
+/* nome da cor */
+/* background-color: #EBC9F2; */
+
+/* Hexadecimal */
+/* background-color: #EBC9F2; */
+
+/* RGB */
+/* background-color: rgb(255, 72, 133); */
+
+/* RGB COM TRANSPARÊNCIA */
+/* background-color: rgba(255, 72, 133, 0.3); */
+
+
+/* --- UNIDADES DE MEDIDA DE FONTE --- */
+
+/* PX (PIXELS) É UMA UNIDADE FIXA. O TAMANHO SEMPRE SERÁ O MESMO, INDEPENDENTE DO TAMANHO DA TELA. */
+
+/* EM */
+/* 2EM - DOBRO DO TAMANHO PADRÃO. SIGNIFICA QUE ELE É UM MULTIPLICADOR DO TAMANHO BASE. */
+
+/* 120% - 20% maior que o padrão */
+
+/* 5vw - 5% da largura da tela. Isso faz com que o tamanho do texto se ajuste ao tamanho da tela! Muito útil para design responsivo. */
+
+
+/* --- FONT WEIGHT (PESO / GROSSURA DA FONTE) --- */
+
+/*
+font-weight: controla a grossura (negrito) do texto.
+100 = super fino
+400 = normal
+700 = negrito
+900 = super negrito
+*/
+
+/* STRONG (Tag HTML que deixa em negrito por padrão) */
